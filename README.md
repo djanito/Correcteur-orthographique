@@ -5,32 +5,36 @@
 </p>
 
 
-# Installation de CUnit et Doxygen
-Taper la commande suivante dans un terminal :
+# Installation of CUnit and Doxygen
+Type the following command in a terminal :
 	sudo apt-get install libcunit1 libcunit1-dev libcunit1-doc doxygen
 
-# Utilisation du makefile
-Pour la compilation de l'exécutable, des tests et de la documentation :
+# Using the makefile
+For the compilation of the executable, tests and documentation :
 
 	make all
 
-Pour la compilation de l'exécutable seul :
+For the compilation of the executable only :
 
 	make exe
 
-Pour la compilation des tests seuls :
+For the compilation of the tests alone :
 
 	make tests
 
-Pour la compilation de la documentation seule :
+For the compilation of the documentation only :
 
 	make doc
 
-Pour le nettoyage du répertoire :
+For the cleaning of the directory :
 
 	make clean
 
-# Dictionnaire de référence
-Le dictionnaire de la langue française utilisable par notre correcteur orthographique est généré à partir du fichier dico-ref-ascii.txt.
+# Reference dictionary
+The French dictionary used by our spellchecker is generated from the file dico-ref-ascii.txt.
 
-Pour le remplir avec le dictionnaire français : ./bin/correcteur -d fic.dico -f dico-ref-ascii.txt
+To fill it with the French dictionary : `./bin/corrector -d fic.dico -f dico-ref-ascii.txt`
+
+# Usage
+To correct a sentence once your .dico file is generated, type in a terminal :
+ 	`echo "sentence to correct" | correcteur.exe -d <dictionnary.dico>`
