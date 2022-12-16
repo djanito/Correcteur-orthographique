@@ -1,0 +1,45 @@
+#include<CUnit/Basic.h>
+#include"levenshtein.h"
+
+int init_success(void){ 
+    return 0 ; 
+}
+
+
+void testEchanger(void){
+long int a = 1 ;
+long int b = 2 ;
+    echanger(&a, &b) ;
+    CU_ASSERT_TRUE((a==2) && (b==1)) ;
+}
+
+int main(int argc, char** argv){
+  
+  CU_pSuite pSuite = NULL;
+
+  if (CUE_SUCCESS != CU_initialize_registry())
+    return CU_get_error();
+
+  pSuite = CU_add_suite("Tests des tris", init_success, clean_success);
+  if (NULL == pSuite) {
+    CU_cleanup_registry();
+    return CU_get_error();
+  }
+
+  if  (  (NULL == CU_add_test(pSuite, "echanger", testEchanger))
+     
+      ){
+      CU_cleanup_registry() ;
+      return CU_get_error() ;
+    }
+
+  CU_basic_set_mode(CU_BRM_VERBOSE) ;
+  CU_basic_run_tests() ;
+  printf("\n") ;
+  CU_basic_show_failures(CU_get_failure_list()) ;
+  printf("\n\n") ;
+
+  CU_cleanup_registry() ;
+  return CU_get_error() ;
+  return 0 ;
+}
