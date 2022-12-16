@@ -1,6 +1,6 @@
 <p align="center">
   <strong>Welcome to this C-based Spell-checker using BK-Tree and Levenshtein-Damerau distance.</strong>
-  <br>
+  <br><br>
   <img width="704" alt="screenshot" src="png/screenshot.png">
 </p>
 
