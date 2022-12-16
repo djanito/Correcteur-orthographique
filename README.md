@@ -1,3 +1,10 @@
+<p align="center">
+  <strong>Welcome to this C-based Spell-checker using BK-Tree and Levenshtein-Damerau distance.</strong>
+
+  <img width="704" alt="screenshot" src="png/screenshot.png">
+</p>
+
+
 # Installation de CUnit et Doxygen
 Taper la commande suivante dans un terminal :
 	sudo apt-get install libcunit1 libcunit1-dev libcunit1-doc doxygen
